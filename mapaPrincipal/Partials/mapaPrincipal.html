@@ -1,0 +1,47 @@
+﻿<div layout="column" flex =" 100">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Santiago del Estero - La Banda</h2>
+        </div>
+    </md-toolbar> 
+    <google-map center="map.center"
+                zoom="map.zoom"
+                draggable="true"
+                options="map.options"
+                control="map.control">
+        <markers models="markers" coords="'self'" icon="'icon'" click="'onClick'">
+            <windows show="show">
+                <div ng-controller="modelCtrl">
+                    <h1 ng-non-bindable>Nombre: {{name}}</h1>
+                    <h2 ng-non-bindable>Direccion: {{direccion}}</h2>
+                    <h3 ng-non-bindable>Supervisor: {{supervisor}}</h3>
+                    <button ng-click="showInfo()">Show info</button>
+                </div>
+            </windows>
+        </markers>
+        
+    </google-map>
+
+</div>
+<!--<div layout="column" flex="100">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Santiago del Estero</h2>
+        </div>
+    </md-toolbar>
+    <google-map center="mapTermas.center"
+                zoom="mapTermas.zoom"
+                draggable="true"
+                options="mapTermas.options"
+                control="mapTermas.control">
+        <markers models="mapTermas.markers" coords="'self'" icon="'icon'" click="'onClick'">
+            <windows show="show">
+                <div ng-controller="modelCtrl">
+                    <h1 ng-non-bindable>{{name}}</h1>
+                    <button ng-click="showInfo()">Show info</button>
+                </div>
+            </windows>
+        </markers>
+
+    </google-map>
+</div>-->
